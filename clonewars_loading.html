@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Wars RP Loading...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+        }
+        #video-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+        .overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 20px cyan;
+        }
+        .lightsaber {
+            width: 300px;
+            height: 10px;
+            background: cyan;
+            box-shadow: 0 0 20px cyan;
+            margin: 20px auto;
+            animation: flicker 1s infinite alternate;
+        }
+        @keyframes flicker {
+            from { opacity: 0.8; }
+            to { opacity: 1; }
+        }
+        .rules {
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        .music-control {
+            position: absolute;
+            bottom: 20px; left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <video id="video-bg" autoplay loop muted>
+        <source src="https://example.com/clonewars.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Willkommen bei Clone Wars RP</h1>
+        <div class="lightsaber"></div>
+        <div class="rules">
+            <p>⚠ Respektiere andere Spieler</p>
+            <p>⚔ Folge den Befehlen deines Kommandanten</p>
+            <p>🚀 Kein RDM / FailRP!</p>
+        </div>
+    </div>
+    <div class="music-control">
+        <audio controls autoplay loop>
+            <source src="https://example.com/clonewars-theme.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</body>
+</html>
